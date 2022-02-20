@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+
+{% block body %}
+<h1>Bienvenidos a la Facultad</h1>
+<h2>Acá prodrás vizualizar toda la informacion sobre Carreras, Cursos, Estudiantes, Matriculas</h2>
+<table>
+<div class="container-fluid">
+    <div><a class="navbar-brand" href="/inicio"><button>Inicio</button></a></div>
+    <div><a class="navbar-brand" href="/carrera"><button>Carrera</button></a></div>
+    <div><a class="navbar-brand" href="/curso"><button>Curso</button></a></div>
+    <div><a class="navbar-brand" href="/estudiante"><button>Estudiante</button></a></div>
+    <div><a class="navbar-brand" href="/matricula"><button>Matricula</button></a></div>
+    <div><a class="navbar-brand" href="/contacto"><button>Contacto</button></a></div>
+</div>
+</table>
+{% endblock%}

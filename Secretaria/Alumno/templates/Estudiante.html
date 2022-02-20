@@ -1,0 +1,36 @@
+{% extends './base.html' %}
+
+{% block title %} Gestion de Estudiantes {% endblock %}
+
+
+{% block body %}
+<div class="row">
+        <h2>Gestion de Estudiantes</h2>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Estudiantes</h1>
+        <div class="table-responsive py-2">
+            <table class="'table table-striped">
+                <thead>
+                    <tr>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>DNI</th>
+                        <th>Carrera</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>  
+                <tbody>
+                    {% for e in estudiantes %}
+                    <tr>
+                        <td>{{e.apellido}}</td>
+                        <td>{{e.nombre}}</td>
+                        <td>{{e.dni}}</td>
+                        <td>{{e.carrera}}</td>
+                        <td>{{e.estado}}</td>
+                    </tr>    
+                    {% endfor%}
+                </tbody>              
+            </table>
+        </div>
+</div>
+{% endblock%}

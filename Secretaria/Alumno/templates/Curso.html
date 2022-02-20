@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+
+{% block title %} Gestion de Cursos {% endblock %}
+
+{% block body %}
+<div class="row">
+        <h2>Gestion de Cursos</h2>
+    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <h1>Cursos</h1>
+        <div class="table-responsive py-4">
+            <table class="'table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Duracion</th>
+                        <th>Docente</th>
+                    </tr>
+                </thead>  
+                <tbody>
+                    {% for x in cursos %}
+                    <tr>
+                        <td>{{x.nombre}}</td>
+                        <td>{{x.duracion}}</td>
+                        <td>{{x.docente}}</td>
+                    </tr>    
+                    {% endfor%}
+                </tbody>              
+            </table>
+        </div>
+</div>
+{% endblock%}

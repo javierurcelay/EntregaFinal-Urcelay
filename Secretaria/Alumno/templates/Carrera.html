@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+
+{% block title %} Gestion de Carreras {% endblock %}
+
+{% block body %}
+<div class="row">
+        <h2>Gestion de Carreras</h2>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Carreras</h1>
+        <div class="table-responsive py-2">
+            <table class="'table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Duracion</th>
+                        <th>Turno</th>
+                    </tr>
+                </thead>  
+                <tbody>
+                    {% for c in carreras %}
+                    <tr>
+                        <td>{{c.nombre}}</td>
+                        <td>{{c.duracion}}</td>
+                        <td>{{c.turno}}</td>
+                    </tr>    
+                    {% endfor%}
+                </tbody>              
+            </table>
+        </div>
+</div>
+{% endblock%}

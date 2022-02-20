@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+
+{% block title %} Gestion de Matriculas {% endblock %}
+
+
+{% block body %}
+<div class="row">
+        <h2>Gestion de Matriculas</h2>
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Matriculas</h1>
+        <div class="table-responsive py-2">
+            <table class="'table table-striped">
+                <thead>
+                    <tr>
+                        <th>Estudiante</th>
+                    </tr>
+                </thead>  
+                <tbody>
+                    {% for m in matriculas %}
+                    <tr>
+                        <td>{{m.estudiante}}</td>
+                    </tr>    
+                    {% endfor%}
+                </tbody>              
+            </table>
+        </div>
+</div>
+{% endblock%}
